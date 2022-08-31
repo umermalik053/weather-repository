@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+   
+    </head>
+
+<body class="umar">
+
+    <center>
+    <h1>weather forecast for you</h1>
+    <form onsubmit="doweather(); return false">
+   <h2>TEMPERATURE::</h2>  <br><br>
+    <input type="number" class="wdh" id="temp" placeholder="Enter current temperature">
+    <br><br>
+   <h2>MINIMUM TEMPERATURE::</h2>  <br><br> <input type="number" class="wdh" id="min" placeholder="What is the minimum weather going to be?">
+    <br><br>
+   <h2>MAXIMUM TEMPERATURE::</h2>  <br><br> <input type="number" class="wdh" id="max" placeholder="what is the maximum weather going to be?">
+    <br><br>
+   <h2> What time are you going to outside?</h2>  <br><br> <input type="radio" name="outing" class="eaen">EARLY<input type="radio" name="outing" class="eaen">EVENING<input type="radio" name="outing" class="eaen"> NIGHT
+     <br><br><br><br><br><hr>
+     <button type="submit"> click this button for submit</button>
+     <br><br>
+     <button type="reset"> click this button for reset</button>
+    </form>
+    <h3>this is your answer</h3>
+    <h3 id="result"></h3></center>
+    <script>
+       function doweather()
+       {
+           let  temperature = document.querySelector('#temp').value
+           let  maximum = document.querySelector('#max').value
+           let  minimum = document.querySelector('#min').value
+         let  time = document.querySelector('.eaen').value
+
+         document.querySelector("#result").innerHTML
+
+          if (temperature<=14 || ( minimum < 10 && time === "evening")  )
+           {
+               x="dont go outside"
+            document.querySelector("#result").innerHTML=x
+          } else  if (temperature>=30 || (maximum>35 && time ==="early"))
+           {
+               x="dont go outside"
+            document.querySelector("#result").innerHTML=x
+          }
+          else {
+               x="weather look ok you can go outside"
+            document.querySelector("#result").innerHTML=x
+          }
+
+
+
+
+
+
+
+       }
+
+    </script>
+
+
+</body>
+
+</html>
