@@ -24,11 +24,21 @@ h1{
 
     
 }
+.wdh:hover{
+    background-color: black;
+    animation: reverse;
+}
 button{
     padding: 1%;
     border-radius: 10%;
     outline-style: double;
     background-color: aquamarine;
+    /* background-color: aquamarine; */
+
+}
+button:hover{
+    background-color: rgb(210, 255, 168);
+    font-size: 20px;
 
 }
 h3{
